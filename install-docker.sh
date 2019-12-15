@@ -34,6 +34,12 @@ apt-get update && apt-get install \
     -y && dpkg --add-architecture i386 && apt install libc6-i386 \
     -y && apt-get upgrade -y && apt-get autoremove -y && apt-get autoclean
 
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/powershell.list
+apt update && apt install powershell -y
+
 python3 -m pip install --upgrade pip && python3 -m pip install --upgrade \
     pipenv \
     git+https://github.com/arthaud/python3-pwntools.git
