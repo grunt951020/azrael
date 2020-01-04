@@ -7,9 +7,11 @@ apt-get update && apt-get install \
     curl \
     dnsutils \
     git \
+    ltrace \
     nmap \
     p7zip \
     radare2 \
+    strace \
     tmux \
     tshark \
     vim \
